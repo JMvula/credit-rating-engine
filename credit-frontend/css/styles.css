@@ -1,0 +1,1061 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* =====================================================
+       BACKGROUND IMAGE
+
+       PUT YOUR BACKGROUND IMAGE HERE:
+
+       credit-frontend/images/background.jpg
+
+       If you change the filename, change it below.
+       ===================================================== */
+
+    background-image: url("../images/spiral.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.page-container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    min-height: 600px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    /*
+       This gives the whole card a subtle glass edge.
+    */
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.30);
+
+}
+
+
+/* =========================================================
+   LEFT IMAGE PANEL
+   ========================================================= */
+
+.image-panel {
+
+    width: 40%;
+
+    min-height: 600px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    /*
+       The left side is slightly darker so that
+       your white logo can stand out.
+    */
+
+    background:
+        linear-gradient(
+            rgba(0, 30, 15, 0.40),
+            rgba(0, 30, 15, 0.40)
+        );
+
+    backdrop-filter: blur(2px);
+
+    -webkit-backdrop-filter: blur(2px);
+
+}
+
+
+/* =========================================================
+   HOBBITON LOGO
+   ========================================================= */
+
+.hobbiton-logo {
+
+    /*
+       CHANGE THE SIZE HERE if your logo is too large
+       or too small.
+    */
+
+    width: 190px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 25px;
+
+    /*
+       Slight shadow makes a white logo stand out
+       against a background.
+    */
+
+    filter: drop-shadow(
+        0 5px 12px rgba(0, 0, 0, 0.35)
+    );
+
+}
+
+
+/* =========================================================
+   LEFT SIDE TEXT
+   ========================================================= */
+
+.brand-text {
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.brand-text h2 {
+
+    margin: 0;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.35);
+
+}
+
+
+.brand-text p {
+
+    margin-top: 10px;
+
+    margin-bottom: 0;
+
+    font-size: 15px;
+
+    opacity: 0.9;
+
+}
+
+
+/* =========================================================
+   RIGHT GLASS PANEL
+   ========================================================= */
+
+.form-panel {
+
+    width: 60%;
+
+    padding: 45px;
+
+    /*
+       THIS is what creates the glass effect.
+
+       Instead of solid white, we use white with
+       transparency.
+    */
+
+    background: rgba(255, 255, 255, 0.78);
+
+    /*
+       Blur whatever is behind the panel.
+    */
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    /*
+       Subtle glass border.
+    */
+
+    border-left: 1px solid rgba(255, 255, 255, 0.60);
+
+}
+
+
+/* =========================================================
+   RIGHT SIDE TITLE
+   ========================================================= */
+
+.form-panel h1 {
+
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    color: #1f1f1f;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+.subtitle {
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
+
+    color: #555;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error-message {
+
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    background: rgba(255, 220, 220, 0.90);
+
+    border: 1px solid rgba(200, 50, 50, 0.30);
+
+    border-radius: 7px;
+
+    color: #9b1c1c;
+
+}
+
+
+/* =========================================================
+   TWO COLUMN FORM
+   ========================================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 28px;
+
+    row-gap: 20px;
+
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #2b2b2b;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(100, 100, 100, 0.25);
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.80);
+
+    color: #222;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+.form-group input:focus {
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-color: #8aaa45;
+
+    box-shadow:
+        0 0 0 3px rgba(138, 170, 69, 0.15);
+
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-group input::placeholder {
+
+    color: #999;
+
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 28px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #8aaa45;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+button:hover {
+
+    background: #759638;
+
+    box-shadow:
+        0 5px 15px rgba(100, 130, 50, 0.30);
+
+}
+
+
+button:active {
+
+    transform: translateY(1px);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    body {
+
+        padding: 15px;
+
+    }
+
+
+    .page-container {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+
+    .image-panel {
+
+        width: 100%;
+
+        min-height: 250px;
+
+        padding: 30px;
+
+    }
+
+
+    .form-panel {
+
+        width: 100%;
+
+        padding: 30px;
+
+        border-left: none;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.60);
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-panel h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .hobbiton-logo {
+
+        width: 150px;
+
+    }
+
+}
+
+/* =========================================================------------------------------------------------------------------
+   CREDIT SCORING RESULT PAGE
+   =========================================================--------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------
+   RESULT PAGE BACKGROUND
+   --------------------------------------------------------- */
+
+.result-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    /*
+        ================================
+        BACKGROUND IMAGE
+        ================================
+
+        Put your background image here:
+
+        credit-frontend/
+        ├── images/
+        │   └── background.jpg
+
+        Change the filename if necessary.
+    */
+
+    background-image:
+        linear-gradient(
+            rgba(0, 255, 200, 0.15),
+            rgba(0, 180, 100, 0.15)
+        ),
+        url("../images/spiral.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN RESULT CARD
+   --------------------------------------------------------- */
+
+.result-card {
+
+    width: 100%;
+    max-width: 1100px;
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* ---------------------------------------------------------
+   LEFT BRANDING PANEL
+   --------------------------------------------------------- */
+
+.result-brand-panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 150, 140, 0.75),
+            rgba(0, 130, 120, 0.75)
+        );
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+
+/* ---------------------------------------------------------
+   HOBBITON LOGO
+   --------------------------------------------------------- */
+
+.result-logo {
+
+    width: 210px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 35px;
+}
+
+
+/* ---------------------------------------------------------
+   BRANDING TEXT
+   --------------------------------------------------------- */
+
+.result-brand-panel h2 {
+
+    margin: 0 0 12px;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.result-brand-panel p {
+
+    margin: 0;
+
+    font-size: 17px;
+
+    opacity: 0.95;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT CONTENT PANEL
+   --------------------------------------------------------- */
+
+.result-content {
+
+    padding: 50px;
+
+    background: rgba(255, 255, 255, 0.68);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    color: #222;
+}
+
+
+/* ---------------------------------------------------------
+   RESULT HEADER
+   --------------------------------------------------------- */
+
+.result-header h1 {
+
+    margin: 0 0 8px;
+
+    font-size: 34px;
+
+    font-weight: 700;
+}
+
+
+.result-header p {
+
+    margin: 0 0 35px;
+
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   RISK SECTION
+   --------------------------------------------------------- */
+
+.risk-section {
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.60);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.risk-label {
+
+    margin: 0 0 12px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #666;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* ---------------------------------------------------------
+   RISK BADGE
+   --------------------------------------------------------- */
+
+.risk-badge {
+
+    display: inline-block;
+
+    padding: 12px 35px;
+
+    border-radius: 30px;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+}
+
+
+/* Individual risk styles */
+
+.risk-low {
+
+    background: rgba(76, 175, 80, 0.18);
+
+    color: #2e7d32;
+}
+
+
+.risk-medium {
+
+    background: rgba(139, 174, 61, 0.20);
+
+    color: #66852d;
+}
+
+
+.risk-high {
+
+    background: rgba(255, 152, 0, 0.20);
+
+    color: #c46b00;
+}
+
+
+.risk-very-high {
+
+    background: rgba(244, 67, 54, 0.18);
+
+    color: #c62828;
+}
+
+
+/* ---------------------------------------------------------
+   PROBABILITY SECTION
+   --------------------------------------------------------- */
+
+.probability-section {
+
+    margin-bottom: 30px;
+}
+
+
+.probability-section h2 {
+
+    margin: 0 0 20px;
+
+    font-size: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   PROBABILITY ROW
+   --------------------------------------------------------- */
+
+.probability-row {
+
+    margin-bottom: 18px;
+}
+
+
+.probability-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   PROBABILITY BAR
+   --------------------------------------------------------- */
+
+.probability-bar {
+
+    width: 100%;
+
+    height: 10px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.10);
+}
+
+
+.probability-fill {
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* Probability bar colours */
+
+.probability-low {
+
+    background: #79a83b;
+}
+
+
+.probability-medium {
+
+    background: #91b344;
+}
+
+
+.probability-high {
+
+    background: #e69a35;
+}
+
+
+.probability-very-high {
+
+    background: #d9534f;
+}
+
+
+/* ---------------------------------------------------------
+   MODEL INFORMATION
+   --------------------------------------------------------- */
+
+.model-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 18px;
+
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.50);
+
+    border: 1px solid rgba(255, 255, 255, 0.70);
+
+    font-size: 14px;
+}
+
+
+.model-info span {
+
+    color: #666;
+}
+
+
+.model-info strong {
+
+    color: #333;
+}
+
+
+/* ---------------------------------------------------------
+   RESULT BUTTON
+   --------------------------------------------------------- */
+
+.result-button {
+
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    background: #8aad3f;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.result-button:hover {
+
+    background: #789a34;
+
+    transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   ERROR MESSAGE
+   --------------------------------------------------------- */
+
+.result-error {
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+
+.result-error h1 {
+
+    margin-bottom: 15px;
+
+    font-size: 28px;
+}
+
+
+.result-error p {
+
+    margin-bottom: 30px;
+
+    color: #666;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE RESPONSIVE DESIGN
+   --------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .result-page {
+
+        padding: 20px;
+
+        align-items: flex-start;
+    }
+
+
+    .result-card {
+
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        min-height: auto;
+    }
+
+
+    .result-brand-panel {
+
+        padding: 40px 25px;
+    }
+
+
+    .result-logo {
+
+        width: 170px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .result-brand-panel h2 {
+
+        font-size: 25px;
+    }
+
+
+    .result-content {
+
+        padding: 35px 25px;
+    }
+
+
+    .result-header h1 {
+
+        font-size: 28px;
+    }
+}
