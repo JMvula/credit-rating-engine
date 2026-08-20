@@ -1,6 +1,6 @@
 flask
-pandas
-scikit-learn
-xgboost
-joblib
+pandas==3.0.1
+scikit-learn==1.8.0
+xgboost==3.3.0
+joblib==1.5.3
 gunicorn
