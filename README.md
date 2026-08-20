@@ -60,6 +60,7 @@ User fills in the form → Frontend sends JSON → Gateway forwards JSON → Fla
 
 **Project Structure**
 
+```
 Hobbition-credit-scoring/
 │
 ├── credit_scoring_service/
@@ -106,6 +107,7 @@ Hobbition-credit-scoring/
 │
 ├── .gitignore
 └── README.md
+```
 
 **Credit Scoring Model**
 
