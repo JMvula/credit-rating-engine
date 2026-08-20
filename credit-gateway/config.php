@@ -6,6 +6,6 @@
 // Python's config.py, which is the single source of truth for the
 
 
-define('PYTHON_SERVICE_URL', 'http://localhost:5000');
-define('PYTHON_SERVICE_TIMEOUT', 10); // seconds — don't let a slow model hang the gateway forever
+define('PYTHON_SERVICE_URL', 'https://credit-rating-engine.onrender.com');
+define('PYTHON_SERVICE_TIMEOUT', 30);
 define('APP_NAME', 'Hobbiton Credit Rating Gateway');
