@@ -1,6 +1,6 @@
-### 3.4 Building `app.py`, point by point
+### Building `app.py`, point by point
 
-##3.4.1 — Imports and creating the app**
+## — Imports and creating the app**
 
 from time import time
 
@@ -11,13 +11,13 @@ from credit_scoring import model as mdl
 
 app = Flask(__name__) #this creates the web app. Note flask(__name__) is a constructor that takes the name of our current file in ur case app.py. We construct the app object from the Flask class. This is the main entry point for our application. It will handle incoming requests and route them to the appropriate functions. its similar to index.php, everything first comes here and we then route it to the right function.
 
-##3.4.2 — Load the model ONCE at startup**
+## — Load the model ONCE at startup**
 
 ##This is important. Loading a model from disk takes time — you do **not** want to do it on every single request. Load it once, when the server starts, and keep it in memory.
 
 MODEL, LABEL_ENCODER = mdl.load_model()
 
-##3.4.3 — The `/v1/predict` route**
+## — The `/v1/predict` route**
 
 #my php api will call this function
 #ie Frontend ->PHP API -> Flask (/v1/predict) -> predict_one() -> XGBoost -> JSON Response

@@ -29,10 +29,7 @@
             <!-- ==================================================
                  HOBBITON LOGO
 
-                 CHANGE THIS FILE IF YOUR LOGO HAS A DIFFERENT NAME
-
-                 Current expected location:
-                 images/logo.png
+               
                  ================================================== -->
 
             <img

@@ -24,13 +24,7 @@ body {
 
     /* =====================================================
        BACKGROUND IMAGE
-
-       PUT YOUR BACKGROUND IMAGE HERE:
-
-       credit-frontend/images/background.jpg
-
-       If you change the filename, change it below.
-       ===================================================== */
+    ========= */
 
     background-image: url("../images/spiral.jpg");
 
@@ -128,10 +122,7 @@ body {
 
 .hobbiton-logo {
 
-    /*
-       CHANGE THE SIZE HERE if your logo is too large
-       or too small.
-    */
+    
 
     width: 190px;
 
@@ -535,13 +526,7 @@ button:active {
         BACKGROUND IMAGE
         ================================
 
-        Put your background image here:
-
-        credit-frontend/
-        ├── images/
-        │   └── background.jpg
-
-        Change the filename if necessary.
+        
     */
 
     background-image:

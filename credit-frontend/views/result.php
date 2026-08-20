@@ -33,15 +33,7 @@ $error  = $viewData['error'] ?? null;
             HOBBITON LOGO
             ================================
 
-            Put your logo here.
-
-            Example:
-            credit-frontend/
-            ├── images/
-            │   └── hobbiton-logo.png
-
-            If your logo has a different filename,
-            change the src below.
+      
         -->
 
         <img

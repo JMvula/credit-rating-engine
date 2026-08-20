@@ -18,7 +18,7 @@ This file basically does 5 things
 import os
 import joblib #used for saving the model once we train
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder #used to conert labels into nos eg low =0, mideum=1 etc since model only works with nos
+from sklearn.preprocessing import LabelEncoder #used to convert labels into nos eg low =0, mideum=1 etc since model only works with nos
 from xgboost import XGBClassifier
 
 from . import config #note a python package is a folder with only python files, therefore we are just importing this file from the same python folder ie config.py
@@ -91,4 +91,4 @@ Returns a dictionary with the risk prediction, probabilities, and model version
     }
 
 
-# Notice `predict_one()` takes a **plain Python dict** in and returns a **plain Python dict** out. That's deliberate — it's the exact shape that will slot into a Flask JSON request/response with almost no extra code in Step 2.
+# Notice `predict_one()` takes a **plain Python dict** in and returns a **plain Python dict** out. That's deliberate — it's the exact shape that will slot into a Flask JSON request/response with almost no extra code

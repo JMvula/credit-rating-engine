@@ -1,8 +1,8 @@
 
 
-#2.3.3 — `features.py` — rebuilding notebook sections 4.1–4.5**
+# — `features.py` — rebuilding notebook 
 
-#This is the exact logic from your notebook's grouping/aggregation steps, just moved into a reusable function instead of scattered cells.
+#This is the exact logic from our notebook,grouping/aggregation steps, just moved into a reusable function instead of scattered cells.
 
 """
 features.py
@@ -59,5 +59,4 @@ def build_member_features(bnpl: pd.DataFrame) -> pd.DataFrame:
 
     return features
 
-# This is literally your notebook's cells 4.1 through 4.5, unchanged in logic — just wrapped in a function called build_member_features()` so it can be called from anywhere instead of run cell-by-cell.
 
